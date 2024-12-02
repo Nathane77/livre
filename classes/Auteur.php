@@ -26,17 +26,6 @@ class Auteur {
     public function setNom() {
         $this->nom;
     }
-
-    public function getAuteurFull() {
-        return $this->prenom." ".$this->nom;
-    }
-
-     public function afficherBibliographie(){
-        echo "Livres de ".$this->getAuteurFull()."<br><br>";
-        foreach($this->livres as $book){ 
-             echo $book->getNom()." (".$book->getDate().") : ".$book->getNbPages()." pages / ".$book->getPrix()."€ <br>";
-        }
-    }
     
     public function getLivres()
     {
@@ -48,6 +37,17 @@ class Auteur {
         $this->livres = $livres;
         
         return $this;
+    }
+
+    public function getAuteurFull() {
+        return $this->prenom." ".$this->nom;
+    }
+
+     public function showBibliography(){
+        echo "Livres de ".$this->getAuteurFull()."<br><br>";
+        foreach($this->livres as $book){ 
+             echo $book->getNom()." (".$book->getDate().") : ".$book->getNbPages()." pages / ".$book->getPrix()."€ <br>";
+        }
     }
 
     public function addLivre(Livre $livre){
