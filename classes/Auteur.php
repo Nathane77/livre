@@ -46,7 +46,7 @@ class Auteur {
      public function showBibliography(){
         echo "Livres de ".$this->getAuteurFull()."<br><br>";
         foreach($this->livres as $book){ 
-             echo $book->getNom()." (".$book->getDate().") : ".$book->getNbPages()." pages / ".$book->getPrix()."€ <br>";
+            echo $book->getNom()." (".$book->getDate().") : ".$book->getNbPages()." pages / ".$book->getPrix()."€ <br>";
         }
     }
 

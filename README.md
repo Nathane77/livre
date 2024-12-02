@@ -10,10 +10,10 @@ This exercise is here to learn the basic of `OOP` or `Object Oriented Programmin
 
 This function shows each book's name and info.
 ```php
-     public function afficherBibliographie(){
+    public function afficherBibliographie(){
         echo "Livres de ".$this->getAuteurFull()."<br><br>";
         foreach($this->livres as $book){ 
-             echo $book->getNom()." (".$book->getDate().") : ".$book->getNbPages()." pages / ".$book->getPrix()."€ <br>";
+            echo $book->getNom()." (".$book->getDate().") : ".$book->getNbPages()." pages / ".$book->getPrix()."€ <br>";
         }
     }
 ```
